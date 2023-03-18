@@ -66,19 +66,19 @@
 <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade
     your browser</a> to improve your experience.</p>
 <![endif]-->
-<section class="hero">
-    <section class="navigation">
+<section class="hero section-padding">
+    <!-- <section class="navigation">
         <header>
             <div class="header-content">
                 <div class="logo"><a href="#"><img src="img/logo.png" alt="Logo"></a></div>
                 <div class="header-nav">
                     <nav>
                         <ul class="primary-nav">
-                            <!-- <li><a href="#intro">How we met</a></li> -->
-                            <!-- <li><a href="#events">Invito</a></li>
+                            <li><a href="#intro">How we met</a></li>
+                            <li><a href="#events">Invito</a></li>
                             <li><a href="#instagram">Video</a></li>
                             <li><a href="#eng-pics">Engagement</a></li>
-                            <li class="hidden-sm hidden-xs"><a href="#video-bg">Glimpse of the city</a></li> -->
+                            <li class="hidden-sm hidden-xs"><a href="#video-bg">Glimpse of the city</a></li>
                         </ul>
                         <ul class="member-actions">
                             <li><a href="#map" class="login">Ricevimento</a></li>
@@ -91,34 +91,49 @@
                 </div>
             </div>
         </header>
-    </section>
+    </section> -->
     <div class="container">
         <div class="row">
             <div class="col-md-10 col-md-offset-1">
                 <div class="hero-content text-center">
                     <!--<h1>Ram and Antara</h1>-->
-                    <img src="img/logo-lg.png">
                     <!--<p class="intro">Ram & Antara are getting hitched!</p>-->
                     <!--<a href="#" class="btn btn-fill btn-large btn-margin-right">Scroll Down</a> -->
                 </div>
             </div>
         </div>
-        <div class="row">
+        <!-- <div class="row">
             <div class="col-sm-4 hidden-xs"></div>
             <div class="col-sm-4 hidden-xs text-center"><a href="#rsvp"
                                                            class="btn btn-accent btn-large rsvp-btn">RSVP</a></div>
             <div class="col-sm-4 hidden-xs"></div>
         </div>
     </div>
-    <div class="down-arrow floating-arrow"><a href="#invitation"><i class="fa fa-angle-down"></i></a></div>
+    <div class="down-arrow floating-arrow"><a href="#invitation"><i class="fa fa-angle-down"></i></a></div> -->
 </section>
 
 <section id="invitation" class="section-padding">
     <div class="container">
         <div class="row">
             <div class="col-md-12 text-center">
-                <h3>Ci sposiamo!</h3>
-                <p>Succederà il 10 Giugno 2023 e ci piacerebbe averti con noi</p>
+                <img src="img/pm.png">
+                <h2 id="announcement">Ci sposiamo!</h2>
+                <h3 id="date">Quando?</h3>
+                <div id="countdown" class="container">
+                    <div class="row">
+                        <div class="col-md-12 text-center">
+                            <div id="countdown">
+                                <ul>
+                                  <li><span id="days"></span>Giorni</li>
+                                  <li><span id="hours"></span>Ore</li>
+                                  <li><span id="minutes"></span>Minuti</li>
+                                  <li><span id="seconds"></span>Secondi</li>
+                                </ul>
+                              </div>
+                              <h1>10 Giugno 2023</h1>
+                            </div>
+                        </div>
+                    </div>
                 <!-- <div class="share-bar"></div> -->
             </div>
         </div>
@@ -360,13 +375,11 @@
     </div>
 </section> -->
 
-<section id="video-bg" class="hidden-sm hidden-xs">
+<section id="video-bg">
     <div id="bgndVideo" class="player"
-         data-property="{videoURL:'https://youtu.be/fS2VV9kMmHU',containment:'#video-bg',autoPlay:true, mute:true, showControls:false, startAt:80, stopAt:259, opacity:1}">
+         data-property="{videoURL:'https://youtu.be/ClxauicvnBM',containment:'#video-bg',autoPlay:true, mute:true, showControls:false, startAt:12, stopAt:180, opacity:1, ratio: '4/3'}">
     </div>
     <div id="video-content">
-        <h5>Video</h5>
-        <p>Blocked</p>
     </div>
 </section>
 
@@ -386,8 +399,9 @@
                 <div id="map-content" class="pointer-events-auto">
                     <div class="row">
                         <div class="col-md-4">
-                            <h5>Chiesa di Palata</h5>
-                            <p>Saluti al prete</p>
+                            <h5>Santa Maria La Nova</h5>
+                            <p>Piazza del Popolo - Palata <br>10.30</p>
+                            <p></p>
                         </div>
                         <div class="col-md-4">
                             <h5>Max</h5>
@@ -397,19 +411,13 @@
                         </div>
                         <div class="col-md-4">
                             <h5>Villa Florio</h5>
-                            <p>Da qualche parte tra Molise e Puglia</p>
+                            <p>Via Marconi SS89 Km 26 - San Nicandro Garganico (FG)</p>
+                            <p></p>
                         </div>
                     </div>
-                    <!-- <div class="row text-center">
-                        <div class="col-md-6" style="padding: 5px;">
-                            <a class="btn btn-fill btn-small"
-                               href="https://m.uber.com/ul/?action=setPickup&client_id=Yh7Dl6SjB56RY2JuuZF8ttVa6ryFV78W&pickup=my_location&dropoff[formatted_address]=Fortune%20Park%20Panchwati%20-%20Hotels%20in%20Kolkata%2C%20Howrah%2C%20West%20Bengal%2C%20India&dropoff[latitude]=22.593276&dropoff[longitude]=88.270277"><i
-                                    class="fa fa-taxi"></i>&nbsp;&nbsp;Book Uber</a>
-                        </div> -->
                         <div class="col-md-6 col-md-offset-4" style="padding: 5px;">
                             <a class="btn btn-accent btn-small" id="btn-show-map"><i class="fa fa-map-marker"></i>&nbsp;&nbsp;Mappa</a>
                         </div>
-                    <!-- </div> -->
                 </div>
             </div>
         </div>
@@ -461,16 +469,17 @@
                     <div class="row">
                         <div class="col-md-6 col-sm-6">
                             <div class="form-input-group">
-                                <i class="fa fa-users"></i><input type="number" name="numero" class="" min="0"
-                                                                  max="4"
+                                <i class="fa fa-users"></i><input type="number" name="numero" class="" min="1"
                                                                   placeholder="Quanti siete?"
                                                                   required>
                             </div>
                         </div>
+                        <!-- Radio button for bus transport-->
                         <div class="col-md-6 col-sm-6">
                             <div class="form-input-group">
-                                <i class="fa fa-home"></i><input name="staying" class=""
-                                                                  placeholder="Hai bisogno di fermarti?">
+                                <i class="fa fa-car"></i><input name="bus" class=""
+                                                                placeholder="Hai bisogno di un passaggio?"
+                                                                required>
                             </div>
                         </div>
                     </div>
@@ -482,6 +491,19 @@
                     </button>
                 </form>
             </div>
+        </div>
+    </div>
+</section>
+
+<section id="iban" class="section-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <h4><b><em>Il pensiero più bello che possiate farci è essere con noi nel nostro grande giorno</em></b><br>
+                    Se gradite farci un regalo, preferiamo metterlo nel salvadanaio e quando lo useremo in futuro <br> penseremo con gioia a voi e al vostro gesto
+                </h4>
+            </div>
+
         </div>
     </div>
 </section>
