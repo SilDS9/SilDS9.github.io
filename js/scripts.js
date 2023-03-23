@@ -164,9 +164,9 @@ $(document).ready(function () {
     /********************** Embed youtube video *********************/
     // $('.player').YTPlayer();
 
-    // jQuery(function(){
-    //     jQuery("#bgnVideo").YTPlayer();
-    //   });
+    jQuery(function(){
+        jQuery("#bgnVideo").YTPlayer();
+      });
 
 
     /********************** Toggle Map Content **********************/
@@ -216,9 +216,9 @@ $(document).ready(function () {
         e.preventDefault();
         var data = $(this).serialize();
 
-        $('#alert-wrapper').html(alert_markup('info', '<strong>Solo un momento...</strong>'));
+        $('#alert-wrapper').html(alert_markup('info', '<strong>Solo un momento!</strong> Stiamo prendendo nota dei tuoi dati.'));
 
-        $.post('https://script.google.com/macros/s/AKfycbzUKSFuqoTamgQOehRa2M-VO58b1dzKHCWbXTbfUSGvv26Et5oGSFNyXGI2U4UiKz28Cg/exec', data)
+        $.post('https://script.google.com/macros/s/AKfycbxwtDpZJ3hIspkmAJR_xdNPCZx4cJjdSuQA6boYA9Tn3NBVj8ODQpYLttbAJco49kqU5g/exec', data)
             .done(function (data) {
                 console.log(data);
                 if (data.result === "error") {
@@ -230,7 +230,7 @@ $(document).ready(function () {
             })
             .fail(function (data) {
                 console.log(data);
-                $('#alert-wrapper').html(alert_markup('danger', '<strong>Ops!</strong> Qualcosa è andato storto'));
+                $('#alert-wrapper').html(alert_markup('danger', '<strong>Ops!</strong> Qualcosa è andato storto. '));
             });
         }
     );
