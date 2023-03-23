@@ -59,6 +59,10 @@
     <link rel="stylesheet" href="node_modules/animate.css/animate.min.css" onerror="loadCssFromCDN('animate.css')">
     <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" onerror="loadCssFromCDN('font-awesome.css')">
     <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+    <link href="css/jquery.mb.YTPlayer.min.css" media="all" rel="stylesheet" type="text/css">
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+    <script src="inc/jquery.mb.YTPlayer.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.css" integrity="sha512-frwe9LhYfUEW6OPPCXCngaeZ9LqQsvw+HG/kGBcJMby9wGIKNaBieEF8r9sO4b4lJah0OF2tV1iF8q6uymC00w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body id="top">
@@ -377,7 +381,7 @@
 
 <section id="video-bg">
     <div id="bgndVideo" class="player"
-         data-property="{videoURL:'https://youtu.be/ClxauicvnBM',containment:'#video-bg', startAt:12, stopAt:180}">
+         data-property="{videoURL:'https://youtu.be/ClxauicvnBM',containment:'#video-bg', startAt:12, stopAt:180, useOnMobile: false, autoPlay: true}">
     </div>
     <div id="video-content">
     </div>
@@ -462,7 +466,7 @@
                         </div>
                         <div class="col-md-6 col-sm-6">
                             <div class="form-input-group">
-                                <i class="fa fa-user"></i><input name="nome" class=""
+                                <i class="fa fa-user"></i><input name="name" class=""
                                                                  placeholder="Nome"
                                                                  required>
                             </div>
@@ -471,7 +475,7 @@
                     <div class="row">
                         <div class="col-md-6 col-sm-6">
                             <div class="form-input-group">
-                                <i class="fa fa-users"></i><input type="number" name="numero" class="" min="1"
+                                <i class="fa fa-users"></i><input type="number" name="extras" class="" min="1"
                                                                   placeholder="Quanti siete?"
                                                                   required>
                             </div>
@@ -525,7 +529,7 @@
 <script src="js/jquery.fancybox.pack.js"></script>
 <script src="js/vendor/bootstrap.min.js"></script>
 <script src="js/jquery.flexslider-min.js"></script>
-<script src="js/jquery.mb.YTPlayer.min.js"></script>
+
 <script src="js/vendor/ouical.js"></script>
 <script src="js/scripts.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.js" integrity="sha512-B3d7oRuEYeD9qpzSY7SRwqRrQoXo7sub43O6QfJ8q0O6Q9f1Z73c1tT22hSTqpMJ8XD+nA47xt91IBY999i1RA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>

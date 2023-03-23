@@ -162,7 +162,11 @@ $(document).ready(function () {
     }
 
     /********************** Embed youtube video *********************/
-    $('.player').YTPlayer({autoPlay:true, mute:true, showControls:false, opacity:1, useOnMobile:true});
+    // $('.player').YTPlayer();
+
+    jQuery(function(){
+        jQuery("#bgnVideo").YTPlayer();
+      });
 
 
     /********************** Toggle Map Content **********************/
@@ -212,31 +216,25 @@ $(document).ready(function () {
         e.preventDefault();
         var data = $(this).serialize();
 
-        $('#alert-wrapper').html(alert_markup('info', '<strong>Just a sec!</strong> We are saving your details.'));
+        $('#alert-wrapper').html(alert_markup('info', '<strong>Solo un momento!</strong> Stiamo prendendo nota dei tuoi dati.'));
 
-        if (MD5($('#invite_code').val()) !== 'b0e53b10c1f55ede516b240036b88f40'
-            && MD5($('#invite_code').val()) !== '2ac7f43695eb0479d5846bb38eec59cc') {
-            $('#alert-wrapper').html(alert_markup('danger', '<strong>Sorry!</strong> Your invite code is incorrect.'));
-        } else {
-            $.post('https://script.google.com/macros/s/AKfycbzHGE7dyOSM11xm2hSS-G1I5LpcGV19tke73aGKmz3OIaicM0T05loRMCfpsEIw0Q5eAg/exec', data)
-                .done(function (data) {
-                    console.log(data);
-                    if (data.result === "error") {
-                        $('#alert-wrapper').html(alert_markup('danger', data.message));
-                    } else {
-                        $('#alert-wrapper').html('');
-                        $('#rsvp-modal').modal('show');
-                    }
-                })
-                .fail(function (data) {
-                    console.log(data);
-                    $('#alert-wrapper').html(alert_markup('danger', '<strong>Sorry!</strong> There is some issue with the server. '));
-                });
+        $.post('https://script.google.com/macros/s/AKfycbwUlLMN7DbMep44nho4a9tYf7IEqKLa6g9vCQeDLx12cLVIr1J7pz_EsvKYeixbSTAjnA/exec', data)
+            .done(function (data) {
+                console.log(data);
+                if (data.result === "error") {
+                    $('#alert-wrapper').html(alert_markup('danger', data.message));
+                } else {
+                    $('#alert-wrapper').html('');
+                    $('#rsvp-modal').modal('show');
+                }
+            })
+            .fail(function (data) {
+                console.log(data);
+                $('#alert-wrapper').html(alert_markup('danger', '<strong>Ops!</strong> Qualcosa è andato storto. '));
+            });
         }
-    });
-
+    );
 });
-
 /********************** Extras **********************/
 
 // Countdown
