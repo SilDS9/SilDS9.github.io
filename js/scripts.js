@@ -218,7 +218,7 @@ $(document).ready(function () {
 
         $('#alert-wrapper').html(alert_markup('info', '<strong>Solo un momento!</strong> Stiamo prendendo nota dei tuoi dati.'));
 
-        $.post('https://script.google.com/macros/s/AKfycbwUlLMN7DbMep44nho4a9tYf7IEqKLa6g9vCQeDLx12cLVIr1J7pz_EsvKYeixbSTAjnA/exec', data)
+        $.post('https://script.google.com/macros/s/AKfycbxwtDpZJ3hIspkmAJR_xdNPCZx4cJjdSuQA6boYA9Tn3NBVj8ODQpYLttbAJco49kqU5g/exec', data)
             .done(function (data) {
                 console.log(data);
                 if (data.result === "error") {
