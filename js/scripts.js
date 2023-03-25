@@ -179,7 +179,6 @@ $(document).ready(function () {
     player = new YT.Player("youtubeEmbed", {
         videoId: videoId, // YouTube Video ID
         playerVars: {
-        autoplay: 1, // Auto-play the video on load
         autohide: 1, // Hide video controls when playing
         disablekb: 1,
         controls: 0, // Hide pause/play buttons in player
